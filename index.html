@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AniVerse — Anime Library</title>
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="container nav__container">
+        <div class="row nav__row">
+          <figure class="nav__img--wrapper">
+            <img src="./assests/Anime AV.png" alt="" class="nav__img" />
+          </figure>
+          <div class="nav__link--list">
+            <ul>
+              <li><a href="#" class="nav__link">Home</a></li>
+              <li><a href="#search" class="nav__link">Search Anime</a></li>
+              <li><a href="#" class="nav__link nav__contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section id="search">
+      <div class="container">
+        <div class="row">
+          <div class="search__title">
+            <h3>Search Our Anime Library</h3>
+          </div>
+          <div class="search__bar">
+            <form class="search__bar--wrapper" onsubmit="searchAnime(event)">
+              <input
+                type="text"
+                class="search__bar--input"
+                placeholder="Search Anime"
+                aria-label="Search anime by title"
+              />
+              <button type="submit" aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+          </div>
+          <div class="anime__filter--wrapper">
+            <select class="anime__filters" onchange="filterAnime(event)">
+              <option class="anime__filter" value="">Sort By</option>
+              <option class="anime__filter" value="highest__rating">
+                Highest Rating
+              </option>
+              <option class="anime__filter" value="newest">Newest</option>
+              <option class="anime__filter" value="oldest">Oldest</option>
+              <option class="anime__filter" value="episodes">
+                Most Episodes
+              </option>
+            </select>
+            <div class="rating-range">
+
+  <h3>
+    Rating range:
+    <span class="rating-range__value">0 - 100</span>
+  </h3>
+
+  <div class="rating-range__slider">
+
+    <div class="rating-range__track"></div>
+    <div class="rating-range__progress"></div>
+
+    <input
+      type="range"
+      class="rating-range__min"
+      min="0"
+      max="100"
+      value="0"
+      step="1"
+      aria-label="Minimum rating"
+    />
+
+    <input
+      type="range"
+      class="rating-range__max"
+      min="0"
+      max="100"
+      value="100"
+      step="1"
+      aria-label="Maximum rating"
+    />
+
+  </div>
+
+  <div class="rating-range__labels">
+    <span>0</span>
+    <span>100</span>
+  </div>
+
+</div>
+          </div>
+        </div>
+      </div>
+      <p class="anime__status" role="status" aria-live="polite"></p>
+    </section>
+    <section id="anime">
+      <div class="container anime__container">
+        <div class="row anime__row">
+          <!-- Anime cards are rendered by index.js. -->
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
