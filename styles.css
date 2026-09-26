@@ -48,6 +48,13 @@ li {
   margin: 0 20px;
 }
 
+footer{
+  height: 15vh;
+  background-color: #08050d;
+  color: white;
+  font-size: 24px;
+}
+
 /* 
 
 NAV
@@ -441,6 +448,7 @@ ANIME
   cursor: pointer;
 }
 .search__bar--wrapper button .fa-magnifying-glass { pointer-events: none; }
+
 @media (max-width: 900px) {
   .anime__filter--wrapper { flex-wrap: wrap; gap: 24px; }
   .anime__row { grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 0 16px; }
@@ -457,3 +465,5 @@ ANIME
 @media (max-width: 380px) {
   .anime__row { grid-template-columns: 1fr; }
 }
+
+
